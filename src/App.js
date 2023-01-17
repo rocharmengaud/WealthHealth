@@ -1,6 +1,5 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { Homepage } from './pages/homepage';
+import { Homepage } from './pages/Homepage';
 import { Error404 } from './pages/404';
 
 const App = () => {
