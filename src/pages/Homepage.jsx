@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Homepage.css';
 import { Link } from 'react-router-dom';
+import { States } from '../components/States';
 
 export const Homepage = () => {
   return (
@@ -34,8 +35,9 @@ export const Homepage = () => {
             <label htmlFor="city">City</label>
             <input id="city" type="text" />
 
-            <label htmlFor="state">State</label>
-            <select name="state" id="state"></select>
+            {/* <label htmlFor="state">State</label>
+            <select name="state" id="state"></select> */}
+            <States />
 
             <label htmlFor="zip-code">Zip Code</label>
             <input id="zip-code" type="number" />
