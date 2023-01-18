@@ -245,9 +245,8 @@ export const States = () => {
       <label htmlFor="state">State</label>
       <select name="state" id="state">
         {states.map((state, key) => {
-          console.log(state);
           key = state.index;
-          return state.name;
+          return <option>{state.name}</option>;
         })}
       </select>
     </div>

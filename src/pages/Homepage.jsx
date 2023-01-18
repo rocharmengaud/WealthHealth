@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Homepage.css';
 import { Link } from 'react-router-dom';
 import { States } from '../components/States';
+import { DatePicker } from '../components/DatePicker';
 
 export const Homepage = () => {
   return (
@@ -20,8 +21,9 @@ export const Homepage = () => {
           <label htmlFor="last-name">Last Name</label>
           <input type="text" id="last-name" />
 
-          <label htmlFor="date-of-birth">Date of Birth</label>
-          <input id="date-of-birth" type="text" />
+          {/* <label htmlFor="date-of-birth">Date of Birth</label>
+          <input id="date-of-birth" type="text" /> */}
+          <DatePicker />
 
           <label htmlFor="start-date">Start Date</label>
           <input id="start-date" type="text" />
@@ -54,9 +56,9 @@ export const Homepage = () => {
         </form>
         <button onClick="saveEmployee()">Save</button>
       </div>
-      <div id="confirmation" className="modal">
+      {/* <div id="confirmation" className="modal">
         Employee Created!
-      </div>
+      </div> */}
     </div>
   );
 };
