@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Homepage.css';
 import { Link } from 'react-router-dom';
 import { States } from '../components/States';
-import { DatePicker } from '../components/DatePicker';
+import { CustomDatePicker } from '../components/CustomDatePicker';
 
 export const Homepage = () => {
   return (
@@ -21,9 +21,9 @@ export const Homepage = () => {
           <label htmlFor="last-name">Last Name</label>
           <input type="text" id="last-name" />
 
-          {/* <label htmlFor="date-of-birth">Date of Birth</label>
-          <input id="date-of-birth" type="text" /> */}
-          <DatePicker />
+          <label htmlFor="date-of-birth">Date of Birth</label>
+          {/* <input id="date-of-birth" type="text" /> */}
+          <CustomDatePicker />
 
           <label htmlFor="start-date">Start Date</label>
           <input id="start-date" type="text" />

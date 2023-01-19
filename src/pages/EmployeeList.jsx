@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BasicTable } from '../components/Table';
 
 export const EmployeeList = () => {
   return (
     <div>
-      <div id="employee-div" class="container">
+      <div id="employee-div" className="container">
         <h1>Current Employees</h1>
-        <table id="employee-table" class="display"></table>
+        <BasicTable />
         <Link to="/">Home</Link>
       </div>
     </div>
