@@ -2,8 +2,8 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'firstName', headerName: 'firstName', width: 100 },
-  { field: 'lastName', headerName: 'lastName', width: 100 },
+  { field: 'lastName', headerName: 'lastName', width: 80 },
+  { field: 'firstName', headerName: 'firstName', width: 80 },
   { field: 'startDate', headerName: 'startDate', width: 100 },
   {
     field: 'department',
@@ -25,8 +25,30 @@ const columns = [
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', department: 'Alaska' },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', department: 'New York' },
+  {
+    id: 1,
+    lastName: 'Snow',
+    firstName: 'Jon',
+    startDate: '01/12/2016',
+    department: 'AL',
+    dateOfBirth: '22/08/1994',
+    street: '20, Rue de test',
+    city: 'Alaska',
+    state: 'AL',
+    zipCode: '11000',
+  },
+  {
+    id: 2,
+    lastName: 'Doe',
+    firstName: 'Gon',
+    startDate: '01/06/2012',
+    department: 'AL',
+    dateOfBirth: '15/05/1989',
+    street: '18, Rue de test',
+    city: 'Alaska',
+    state: 'AL',
+    zipCode: '11000',
+  },
 ];
 
 export const BasicTable = () => {
