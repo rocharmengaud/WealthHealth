@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { SaveButton } from './Button';
+import { setToggle } from '../services/toggleSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
 const style = {
   position: 'absolute',
@@ -18,25 +20,31 @@ const style = {
 };
 
 export const BasicModal = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  // const [open, setOpen] = React.useState(false);
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
+  const dispatch = useDispatch();
+  const toggle = useSelector((state) => state.toggle);
 
   return (
-    <div>
-      <div className="save-button" onClick={handleOpen}>
+    <>
+      <div className="save-button" onClick={() => dispatch(setToggle())}>
         <SaveButton />
       </div>
-      <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Confirmation
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Votre profil a été enregistré avec succès !
-          </Typography>
-        </Box>
-      </Modal>
-    </div>
+      {toggle.active && (
+        <>
+          <Modal open={true} onClose={() => dispatch(setToggle())} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+            <Box sx={style}>
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                Confirmation
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                Votre profil a été enregistré avec succès !
+              </Typography>
+            </Box>
+          </Modal>
+        </>
+      )}
+    </>
   );
 };
