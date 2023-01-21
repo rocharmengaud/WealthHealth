@@ -3,6 +3,7 @@ import '../styles/Homepage.css';
 import { Link } from 'react-router-dom';
 import { States } from '../components/States';
 import { CustomDatePicker } from '../components/CustomDatePicker';
+import { BasicModal } from '../components/Modal';
 
 export const Homepage = () => {
   return (
@@ -54,7 +55,8 @@ export const Homepage = () => {
             <option>Legal</option>
           </select>
         </form>
-        <button onClick="saveEmployee()">Save</button>
+        <BasicModal />
+        {/* <button onClick="">Save</button> */}
       </div>
       {/* <div id="confirmation" className="modal">
         Employee Created!
