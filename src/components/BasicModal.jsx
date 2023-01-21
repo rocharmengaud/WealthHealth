@@ -20,9 +20,6 @@ const style = {
 };
 
 export const BasicModal = () => {
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => setOpen(true);
-  // const handleClose = () => setOpen(false);
   const dispatch = useDispatch();
   const toggle = useSelector((state) => state.toggle);
 
