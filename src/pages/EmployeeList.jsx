@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BasicTable } from '../components/Table';
+import { BasicTable } from '../components/BasicTable';
 
 export const EmployeeList = () => {
   return (

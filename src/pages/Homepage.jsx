@@ -3,7 +3,7 @@ import '../styles/Homepage.css';
 import { Link } from 'react-router-dom';
 import { States } from '../components/States';
 import { CustomDatePicker } from '../components/CustomDatePicker';
-import { BasicModal } from '../components/Modal';
+import { BasicModal } from '../components/BasicModal';
 
 export const Homepage = () => {
   return (
