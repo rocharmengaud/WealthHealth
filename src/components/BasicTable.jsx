@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import { useSelector } from 'react-redux';
 
 const columns = [
   { field: 'lastName', headerName: 'lastName', width: 80 },
@@ -52,9 +53,11 @@ const rows = [
 ];
 
 export const BasicTable = () => {
+  const users = useSelector((state) => state.users);
+
   return (
     <div style={{ height: 300, width: '90%' }}>
-      <DataGrid rows={rows} columns={columns} pageSize={8} rowsPerPageOptions={[8]} checkboxSelection />
+      <DataGrid rows={users} columns={columns} pageSize={8} rowsPerPageOptions={[8]} checkboxSelection />
     </div>
   );
 };

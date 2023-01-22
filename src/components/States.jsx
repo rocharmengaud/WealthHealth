@@ -243,7 +243,7 @@ export const States = () => {
   return (
     <div>
       <label htmlFor="state">State</label>
-      <select name="state" id="state">
+      <select name="state" id="state" /*onChange*/>
         {states.map((state, index) => {
           return <option key={index}>{state.name}</option>;
         })}

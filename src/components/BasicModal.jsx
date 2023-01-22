@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { SaveButton } from './Button';
 import { setToggle } from '../services/toggleSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -25,9 +24,9 @@ export const BasicModal = () => {
 
   return (
     <>
-      <div className="save-button" onClick={() => dispatch(setToggle())}>
+      {/* <div className="save-button" onClick={() => dispatch(setToggle())}>
         <SaveButton />
-      </div>
+      </div> */}
       {toggle.active && (
         <>
           <Modal open={true} onClose={() => dispatch(setToggle())} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
