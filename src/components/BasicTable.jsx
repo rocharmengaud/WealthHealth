@@ -25,32 +25,32 @@ const columns = [
   { field: 'zipCode', headerName: 'Zip code', width: 100 },
 ];
 
-const rows = [
-  {
-    id: 1,
-    lastName: 'Snow',
-    firstName: 'Jon',
-    startDate: '01/12/2016',
-    department: 'AL',
-    dateOfBirth: '22/08/1994',
-    street: '20, Rue de test',
-    city: 'Alaska',
-    state: 'AL',
-    zipCode: '11000',
-  },
-  {
-    id: 2,
-    lastName: 'Doe',
-    firstName: 'Gon',
-    startDate: '01/06/2012',
-    department: 'AL',
-    dateOfBirth: '15/05/1989',
-    street: '18, Rue de test',
-    city: 'Alaska',
-    state: 'AL',
-    zipCode: '11000',
-  },
-];
+// const fakeUsers = [
+//   {
+//     id: 1,
+//     lastName: 'Snow',
+//     firstName: 'Jon',
+//     startDate: '01/12/2016',
+//     department: 'AL',
+//     dateOfBirth: '22/08/1994',
+//     street: '20, Rue de test',
+//     city: 'Alaska',
+//     state: 'AL',
+//     zipCode: '11000',
+//   },
+//   {
+//     id: 2,
+//     lastName: 'Doe',
+//     firstName: 'Gon',
+//     startDate: '01/06/2012',
+//     department: 'AL',
+//     dateOfBirth: '15/05/1989',
+//     street: '18, Rue de test',
+//     city: 'Alaska',
+//     state: 'AL',
+//     zipCode: '11000',
+//   },
+// ];
 
 export const BasicTable = () => {
   const users = useSelector((state) => state.users);
