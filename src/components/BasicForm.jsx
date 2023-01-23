@@ -13,10 +13,16 @@ export const BasicForm = () => {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [dateOfBirth, setdateOfBirth] = useState();
+  const [startDate, setStartDate] = useState();
+  const [street, setStreet] = useState();
+  const [city, setCity] = useState();
+  const [state, setState] = useState();
+  const [zipcode, setZipcode] = useState();
+  const [department, setDepartment] = useState();
 
   const handleSubmit = () => {
     dispatch(setToggle());
-    dispatch(addUser({ firstName, lastName, dateOfBirth }));
+    dispatch(addUser({ firstName, lastName, dateOfBirth, startDate, street, city, state, zipcode, department }));
   };
 
   return (
@@ -49,24 +55,56 @@ export const BasicForm = () => {
         />
 
         <label htmlFor="start-date">Start Date</label>
-        <input id="start-date" type="text" />
+        <CustomDatePicker
+          onChange={(event) => {
+            setStartDate(event.target.value);
+          }}
+        />
 
         <fieldset className="address">
           <legend>Address</legend>
 
           <label htmlFor="street">Street</label>
-          <input id="street" type="text" />
+          <input
+            id="street"
+            type="text"
+            onChange={(event) => {
+              setStreet(event.target.value);
+            }}
+          />
 
           <label htmlFor="city">City</label>
-          <input id="city" type="text" />
+          <input
+            id="city"
+            type="text"
+            onChange={(event) => {
+              setCity(event.target.value);
+            }}
+          />
 
-          <States />
+          <States
+            onChange={(event) => {
+              setState(event.target.value);
+            }}
+          />
 
           <label htmlFor="zip-code">Zip Code</label>
-          <input id="zip-code" type="number" />
+          <input
+            id="zip-code"
+            type="number"
+            onChange={(event) => {
+              setZipcode(event.target.value);
+            }}
+          />
         </fieldset>
         <label htmlFor="department">Department</label>
-        <select name="department" id="department">
+        <select
+          name="department"
+          id="department"
+          onChange={(event) => {
+            setDepartment(event.target.value);
+          }}
+        >
           <option>Sales</option>
           <option>Marketing</option>
           <option>Engineering</option>

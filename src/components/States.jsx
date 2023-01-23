@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const States = () => {
+export const States = (props) => {
   const states = [
     {
       name: 'Alabama',
@@ -243,7 +243,7 @@ export const States = () => {
   return (
     <div>
       <label htmlFor="state">State</label>
-      <select name="state" id="state" /*onChange*/>
+      <select name="state" id="state" onChange={props.onChange}>
         {states.map((state, index) => {
           return <option key={index}>{state.name}</option>;
         })}

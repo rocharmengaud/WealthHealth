@@ -19,10 +19,10 @@ const columns = [
     sortable: true,
     width: 130,
   },
-  { field: 'street', headerName: 'Street', width: 100 },
+  { field: 'street', headerName: 'Street', type: 'string', width: 100 },
   { field: 'city', headerName: 'City', width: 100 },
   { field: 'state', headerName: 'State', width: 100 },
-  { field: 'zipCode', headerName: 'Zip code', width: 100 },
+  { field: 'zipcode', headerName: 'Zip code', width: 100 },
 ];
 
 // const fakeUsers = [
