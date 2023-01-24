@@ -25,7 +25,7 @@ const columns = [
   { field: 'zipcode', headerName: 'Zip code', width: 100 },
 ];
 
-// const fakeUsers = [
+// const fakeUser = [
 //   {
 //     id: 1,
 //     lastName: 'Snow',
@@ -34,18 +34,6 @@ const columns = [
 //     department: 'AL',
 //     dateOfBirth: '22/08/1994',
 //     street: '20, Rue de test',
-//     city: 'Alaska',
-//     state: 'AL',
-//     zipCode: '11000',
-//   },
-//   {
-//     id: 2,
-//     lastName: 'Doe',
-//     firstName: 'Gon',
-//     startDate: '01/06/2012',
-//     department: 'AL',
-//     dateOfBirth: '15/05/1989',
-//     street: '18, Rue de test',
 //     city: 'Alaska',
 //     state: 'AL',
 //     zipCode: '11000',
