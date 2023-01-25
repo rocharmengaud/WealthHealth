@@ -11,6 +11,7 @@ export const usersSlice = createSlice({
 
   reducers: {
     addUser: (state, action) => {
+      // la fonction uuidv4() permet de générér un ID aléatoire
       return [...state, { ...action.payload, id: uuidv4() }];
     },
   },

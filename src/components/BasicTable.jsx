@@ -3,9 +3,9 @@ import { DataGrid } from '@mui/x-data-grid';
 import { useSelector } from 'react-redux';
 
 const columns = [
-  { field: 'lastName', headerName: 'lastName', width: 80 },
-  { field: 'firstName', headerName: 'firstName', width: 80 },
-  { field: 'startDate', headerName: 'startDate', width: 100 },
+  { field: 'lastName', headerName: 'Last name', width: 90 },
+  { field: 'firstName', headerName: 'First name', width: 90 },
+  { field: 'startDate', headerName: 'Start date', width: 100 },
   {
     field: 'department',
     headerName: 'Department',

@@ -1,9 +1,11 @@
 import * as React from 'react';
 import MaterialTable from 'material-table';
+import { ThemeProvider, createTheme } from '@mui/material';
 
 export const TableFiltering = () => {
+  const defaultMaterialTheme = createTheme();
   return (
-    <>
+    <ThemeProvider theme={defaultMaterialTheme}>
       <MaterialTable
         title="Basic Filtering Preview"
         columns={[
@@ -24,6 +26,6 @@ export const TableFiltering = () => {
           filtering: false,
         }}
       />
-    </>
+    </ThemeProvider>
   );
 };
