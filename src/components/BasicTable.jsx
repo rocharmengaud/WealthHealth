@@ -7,12 +7,6 @@ const columns = [
   { field: 'firstName', headerName: 'First name', width: 90 },
   { field: 'startDate', headerName: 'Start date', width: 100 },
   {
-    field: 'department',
-    headerName: 'Department',
-    type: 'string',
-    width: 100,
-  },
-  {
     field: 'dateOfBirth',
     headerName: 'Date of birth',
     description: 'User full name',
@@ -23,6 +17,12 @@ const columns = [
   { field: 'city', headerName: 'City', width: 100 },
   { field: 'state', headerName: 'State', width: 100 },
   { field: 'zipcode', headerName: 'Zip code', width: 100 },
+  {
+    field: 'department',
+    headerName: 'Department',
+    type: 'string',
+    width: 100,
+  },
 ];
 
 // const fakeUser = [
