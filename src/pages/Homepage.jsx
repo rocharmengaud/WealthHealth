@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { BasicForm } from '../components/BasicForm';
 import { BasicModal } from '../components/BasicModal';
 
-export const Homepage = () => {
+const Homepage = () => {
   return (
     <div className="home-content">
       <div className="title">
@@ -19,3 +19,5 @@ export const Homepage = () => {
     </div>
   );
 };
+
+export default Homepage;

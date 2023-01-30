@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import { BasicTable } from '../components/BasicTable';
 import { TableFiltering } from '../components/TableFiltering';
 
-export const EmployeeList = () => {
+const EmployeeList = () => {
   return (
     <div>
       <div id="employee-div" className="container">
@@ -15,3 +15,5 @@ export const EmployeeList = () => {
     </div>
   );
 };
+
+export default EmployeeList;
