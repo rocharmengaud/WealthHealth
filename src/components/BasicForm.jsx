@@ -16,9 +16,9 @@ export const BasicForm = () => {
   const [startDate, setStartDate] = useState();
   const [street, setStreet] = useState();
   const [city, setCity] = useState();
-  const [state, setState] = useState();
+  const [state, setState] = useState('Alabama');
   const [zipcode, setZipcode] = useState();
-  const [department, setDepartment] = useState();
+  const [department, setDepartment] = useState('Sales');
 
   const handleSubmit = () => {
     dispatch(setToggle());
