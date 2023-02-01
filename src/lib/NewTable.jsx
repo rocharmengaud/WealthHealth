@@ -1,24 +1,21 @@
 import React, { useMemo } from 'react';
 import MaterialReactTable from 'material-react-table';
-import { useSelector } from 'react-redux';
 import '../lib/Newtable.css';
 
 const NewTable = () => {
-  const users = useSelector((state) => state.users);
-
-  // const mockedData = [
-  //   {
-  //     firstName: 'John',
-  //     lastName: 'Doe',
-  //     dateOfBirth: '06-10-10',
-  //     startDate: '01-22-2022',
-  //     street: '20, Test street',
-  //     city: 'Testcity',
-  //     state: 'Alabama',
-  //     zipcode: '15000',
-  //     department: 'Sales',
-  //   },
-  // ];
+  const mockedData = [
+    {
+      firstName: 'John',
+      lastName: 'Doe',
+      dateOfBirth: '06-10-10',
+      startDate: '01-22-2022',
+      street: '20, Test street',
+      city: 'Testcity',
+      state: 'Alabama',
+      zipcode: '15000',
+      department: 'Sales',
+    },
+  ];
 
   const columns = useMemo(
     () => [
@@ -73,7 +70,7 @@ const NewTable = () => {
 
   return (
     <div className="table">
-      <MaterialReactTable columns={columns} data={users} />
+      <MaterialReactTable columns={columns} data={mockedData} />
     </div>
   );
 };
