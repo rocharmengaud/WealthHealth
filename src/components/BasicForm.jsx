@@ -8,6 +8,8 @@ import { addUser } from '../services/usersSlice';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
+import '../styles/BasicForm.css';
+
 export const BasicForm = () => {
   const dispatch = useDispatch();
   const [firstName, setFirstName] = useState();
@@ -19,6 +21,17 @@ export const BasicForm = () => {
   const [state, setState] = useState('Alabama');
   const [zipcode, setZipcode] = useState();
   const [department, setDepartment] = useState('Sales');
+
+  // Possibilité d'utilisation des useState d'une manière "groupée" :
+  // const [adress, setAdress] = useState({
+  //   street: undefined,
+  //   city: undefined,
+  //   state: 'Alabama',
+  //   zipcode: undefined,
+  // });
+
+  // exemple sur le champ du zipcode :
+  // setAdress({...adress, zipcode: event.target.value});
 
   const handleSubmit = () => {
     dispatch(setToggle());
@@ -46,20 +59,23 @@ export const BasicForm = () => {
             setLastName(event.target.value);
           }}
         />
+        <div className="date-pickers">
+          {/* <label htmlFor="date-of-birth">Date of Birth</label> */}
+          <CustomDatePicker
+            label={'Date of Birth'}
+            onChange={(event) => {
+              setdateOfBirth(event.target.value);
+            }}
+          />
 
-        <label htmlFor="date-of-birth">Date of Birth</label>
-        <CustomDatePicker
-          onChange={(event) => {
-            setdateOfBirth(event.target.value);
-          }}
-        />
-
-        <label htmlFor="start-date">Start Date</label>
-        <CustomDatePicker
-          onChange={(event) => {
-            setStartDate(event.target.value);
-          }}
-        />
+          {/* <label htmlFor="start-date">Start Date</label> */}
+          <CustomDatePicker
+            label={'Start Date'}
+            onChange={(event) => {
+              setStartDate(event.target.value);
+            }}
+          />
+        </div>
 
         <fieldset className="address">
           <legend>Address</legend>
@@ -97,6 +113,7 @@ export const BasicForm = () => {
             }}
           />
         </fieldset>
+
         <label htmlFor="department">Department</label>
         <select
           name="department"
