@@ -5,12 +5,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## How to setup the project
 
 This project only needs this front-end repository to work.
-Make sure to create a react app and set-up react to be version "^17.0.2" & react-dom "^17.0.2" in your dependencies.
-After that, just a quick npm i to install the dependencies for the project.
+Make sure to install dependencies after cloning it.
+
+## How to install dependencies
+
+```zsh
+`npm install`
+```
 
 ## How to run the project
 
-### `npm start`
+```zsh
+`npm start`
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
