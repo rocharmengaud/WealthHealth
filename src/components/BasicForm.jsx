@@ -10,6 +10,9 @@ import { useState } from 'react';
 
 import '../styles/BasicForm.css';
 
+// This component is a basic form gathering all types of informations on a new employee.
+// Once you click on the save button, new user will be appear into 'NewTable' component.
+
 export const BasicForm = () => {
   const dispatch = useDispatch();
   const [firstName, setFirstName] = useState();

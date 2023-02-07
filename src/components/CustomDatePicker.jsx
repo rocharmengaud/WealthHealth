@@ -1,6 +1,8 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 
+// This component is a date picker. If the user clicks on it, it pops up on the screen.
+
 export const CustomDatePicker = (props) => {
   return (
     <TextField

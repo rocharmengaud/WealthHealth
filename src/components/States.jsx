@@ -1,5 +1,7 @@
 import React from 'react';
 
+// This component is a dropdown input/button containing all available states to chose from.
+
 export const States = (props) => {
   const states = [
     {

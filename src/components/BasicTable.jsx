@@ -40,6 +40,8 @@ const columns = [
 //   },
 // ];
 
+// This component is a table that is not used anymore for this project
+
 export const BasicTable = () => {
   const users = useSelector((state) => state.users);
 

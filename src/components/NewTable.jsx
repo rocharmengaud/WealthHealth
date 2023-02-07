@@ -3,6 +3,8 @@ import MaterialReactTable from 'material-react-table';
 import { useSelector } from 'react-redux';
 import '../styles/NewTable.css';
 
+// This component is a data table.
+// It is the only table used for the project due to easy modifications with the API.
 const NewTable = () => {
   const users = useSelector((state) => state.users);
 

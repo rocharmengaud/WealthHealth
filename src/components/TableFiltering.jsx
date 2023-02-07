@@ -42,6 +42,8 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 };
 
+// This component is a table that is not used anymore for this project
+
 export const TableFiltering = () => {
   setAutoFreeze(false);
   const defaultMaterialTheme = createTheme();

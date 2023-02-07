@@ -18,6 +18,8 @@ const style = {
   p: 4,
 };
 
+// This component is a modal that opens when you click on the save button
+
 export const BasicModal = () => {
   const dispatch = useDispatch();
   const toggle = useSelector((state) => state.toggle);
