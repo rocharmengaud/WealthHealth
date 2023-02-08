@@ -11,7 +11,6 @@ const Homepage = () => {
         <h1>HRnet</h1>
       </div>
       <div className="home-container">
-        {/* <a href="employee-list.html">View Current Employees</a> */}
         <Link to="/employee-list">View Current Employees</Link>
         <BasicForm />
         <BasicModal />
